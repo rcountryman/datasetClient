@@ -23,7 +23,7 @@ func (client StockClient) Get(stock string) (stringResp string) {
 		return "No stock ticker on input"
 	}
 
-	resp, err := http.Get("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=" + stock + "&interval=60min&apikey=" + client.apiKey)
+	resp, err := http.Get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=" + stock + "&apikey=" + client.apiKey)
 	if err != nil {
 		return
 	}
