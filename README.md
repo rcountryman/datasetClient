@@ -8,7 +8,11 @@ needs to be stored in the `STOCK_API_KEY` environment variable.  This is a stopg
 
 The executable takes one command line parameter which is simply the ticker symbol of a stock
 
-`go run main.go GOOG`
+`go run main.go GOOG` 
 
-Data is stored off into a JSON file in the format symbol_date_test.json.  For example:
-AAPL_2022-07-26_test.json
+Or for the build executable
+
+`datasetClient GOOG`
+
+Data is stored off into a JSON file in the format symbol_date_timeseriesdata.json.  For example:
+GOOG_2022-07-26_timeseriesdata.json
