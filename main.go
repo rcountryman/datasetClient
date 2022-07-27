@@ -22,8 +22,8 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// TODO move to data store abstraction
 	// TODO conversion to csv for python
+	// TODO Add either datastore or folder structure
 	dt := time.Now()
 	_ = ioutil.WriteFile(stockSymbol+"_"+dt.Format("2006-01-02")+"_test.json", []byte(rawjson), 0644)
 }
